@@ -15,19 +15,19 @@ export class WeatherService {
   public searchCity(location: string) {
     return  this.http.get(this.mapURL + '?q=' + location + this.appID + '&units=imperial' );
    }
- 
-   
- 
+
+
    public setCoords(data) {
      this.coordsSubject.next(data);
    }
- 
+
    public setWeather(data) {
      this.weatherSubject.next(data);
    }
-   
+
   public searchByCoords(currentPosition) {
-    return this.http.get(this.mapURL + '?lat=' + currentPosition.coords.latitude + '&lon=' + currentPosition.coords.longitude + this.appID + '&units=imperial&cnt=3');
+    return this.http.get(this.mapURL + '?lat=' + currentPosition.coords.latitude + '&lon='
+     + currentPosition.coords.longitude + this.appID + '&units=imperial&cnt');
 
   }
 
