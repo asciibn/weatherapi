@@ -1,0 +1,23 @@
+.city-input{
+    border: 1px solid grey;
+    padding: 6px;
+    border-radius: 4px;
+}
+
+.header-background{
+    padding: 10px;
+    width: 100%;
+    height: 100px;
+    background-color: #f8f8f8;
+   
+}
+
+.right-align-form{
+    text-align:right
+}
+
+.map-border{
+    border: 1px solid grey;
+    margin: 0px;
+    padding: 0px;
+}

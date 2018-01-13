@@ -1,0 +1,20 @@
+<div flex fxLayout="row"   class="header-background">
+  <div fxFlex="50"><h3>Weather API <i class="wi wi-day-sunny"  style="font-size: 40px"></i></h3> </div>
+  <div fxFlex="50" class="right-align-form">
+    <form>
+      <input  type="input" class='city-input'  placeholder="Enter Your City" #cityInput>
+      <button (click)='onKeyup(cityInput.value)' type="button" class="btn btn-outline-primary">Submit</button>        
+    </form>
+  </div>
+</div>
+<div  flex fxLayout="column" class="header-background"> 
+  <div>
+      <h3>{{location}}</h3>
+      <p>Country: {{country}} <br>
+      Population {{population | number: '3.1-2'}}</p>
+  </div>    
+</div>
+<div flex fxLayout="column" class="header-background">
+  <div>High: {{highTemp}}</div>
+  <div>Low: {{lowTemp}}</div>
+</div>

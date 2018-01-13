@@ -1,0 +1,39 @@
+.card-container{
+    background-color: #f8f8f8;
+    padding: 10px; 
+    height: 100%;
+}
+
+.card-item{
+    border: 1px solid grey;
+    padding: 10px;
+    border-radius: 4px;   
+
+}
+
+@media only screen and (max-width: 414px){
+    .card-item{
+        width: 400px;
+        font-size: 1.5vh
+    }
+
+}
+
+@media only screen and (max-width: 412px){
+    .card-item{
+        width: 365px;
+        font-size: 1.5vh
+    }
+
+}
+
+  @media only screen and (min-height: 1366px){
+    .card-item{      
+        width: 750px;
+        font-size: 1vh;
+      }
+}
+
+.right-align-form{
+    text-align:right
+}

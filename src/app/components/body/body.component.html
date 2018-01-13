@@ -1,0 +1,36 @@
+
+          <div fxLayout="column"   *ngFor='let item of weatherArray' class="card-container" >
+            <section fxLayout="row" fxLayoutAlign="space-around center" class="card-item">
+                <div fxFlex>
+                    {{item.date | date :'fullDate'}}<br>
+                    {{item.date | date :'mediumTime'}}
+                 </div>
+                 <div fxFlex='10' fxFlex.xs='15'>
+                    <i [ngClass]='item.iconName' style="font-size: 40px"></i>
+                 </div>
+                 <div fxFlex >
+                    <strong>
+                        {{item.weather.description}}
+                     </strong> 
+                 </div>
+                 <div fxFlex>
+                      <div fxLayout="column">
+                              <div>
+                                  <i class="wi wi-thermometer" style="font-size: 20px"></i>
+                                  &nbsp;Temp : {{item.main.temp | number}}   <i class="wi wi-fahrenheit" style="font-size: 20px"></i>    
+                              </div>
+                              <div>
+                                      &nbsp;&nbsp;&nbsp;&nbsp;High : &nbsp;&nbsp;{{item.main.temp_max}} <i class="wi wi-fahrenheit" style="font-size: 20px"></i>    <br>
+                                      &nbsp;&nbsp;&nbsp;&nbsp;Low : &nbsp;&nbsp;&nbsp;{{item.main.temp_min}} <i class="wi wi-fahrenheit" style="font-size: 20px"></i>    
+                              </div>
+                              <div>
+                                  <i class="wi wi-humidity" style="font-size: 20px"></i>
+                                  Humidity : {{item.main.humidity}}%
+                           </div>   
+                      </div>
+                 </div>
+            </section>
+        </div>
+        
+  
+        
